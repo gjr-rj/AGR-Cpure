@@ -6,11 +6,9 @@
 
 #ifdef _RUN_SANITIZE
 
-#define MAX_SIZE_NAME_FUNC 100
-
 typedef struct _stSanitizeAlloc
 {
-    char funcName[MAX_SIZE_NAME_FUNC + 1];
+    char funcName[STZ_MAX_SIZE_NAME_FUNC + 1];
     unsigned int line;
     unsigned long addr;
     size_t size;
@@ -145,25 +143,45 @@ getSanitizeAmountAllocated(void)
 void
 getSanitizeLastFuncName(char *funcName)
 {
-    strcpy(funcName, sanitize_.foot->funcName);
+    assert(funcName != NULL);
+    funcName[0] = '\0';
+    if (NULL != sanitize_.foot)
+    {
+        strcpy(funcName, sanitize_.foot->funcName);
+    }
 }
 
 unsigned int
 getSanitizeLastLine(void)
 {
-    return sanitize_.foot->line;
+    unsigned int rc = 0;
+    if (NULL != sanitize_.foot)
+    {
+        rc = sanitize_.foot->line;
+    }
+    return rc;
 }
 
 unsigned long
 getSanitizeLastAddr(void)
 {
-    return sanitize_.foot->addr;
+    unsigned long rc = 0;
+    if (NULL != sanitize_.foot)
+    {
+        rc = sanitize_.foot->addr;
+    }
+    return rc;
 }
 
 size_t
 getSanitizeLastSize(void)
 {
-    return sanitize_.foot->size;
+    size_t rc = 0;
+    if (NULL != sanitize_.foot)
+    {
+        rc = sanitize_.foot->size;
+    }
+    return rc;
 }
 
 #endif /* #ifdef _RUN_SMOKE */

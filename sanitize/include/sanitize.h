@@ -3,6 +3,8 @@
 
 #include <stdlib.h>
 
+#define STZ_MAX_SIZE_NAME_FUNC 100
+
 #ifdef _RUN_SANITIZE
 void stzLogMemory(void);
 void *stzMalloc(size_t size, const char *functionName, unsigned line);

@@ -5,6 +5,8 @@
 int
 main(int argc, char *argv[])
 {
+    char *c = (char *)COMMON_MALLOC(5);
+    UNUSED_PARAMETER(c);
 #ifdef _RUN_SMOKE
     run_tdd();
 #else
@@ -13,5 +15,5 @@ main(int argc, char *argv[])
 
     LOG_SANITIZE();
 
-    return 0;
+    return COMMON_AMOUNT();
 }

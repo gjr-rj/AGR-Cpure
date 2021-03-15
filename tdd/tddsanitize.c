@@ -101,8 +101,8 @@ run_tddsanitize(void)
     getSanitizeLastFuncName(funcName);
     assert('\0' == funcName[0]);
     assert(0 == getSanitizeLastLine());
-    assert((unsigned long)c == getSanitizeLastAddr());
-    assert(sizeof(char) == getSanitizeLastSize());
+    assert(0 == getSanitizeLastAddr());
+    assert(0 == getSanitizeLastSize());
 }
 
 #endif /* #if definde(_RUN_SMOKE) && defined (_RUNSANITIZE) */

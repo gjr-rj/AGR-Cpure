@@ -33,6 +33,15 @@ removeSanitizeMemory_(_ptStSanitizeAlloc no, _ptStSanitizeAlloc prevno)
     if (no == sanitize_.head)
     {
         sanitize_.head = sanitize_.head->next;
+        if (NULL == sanitize_.head)
+        {
+            sanitize_.foot = NULL;
+        }
+    }
+    else if (no == sanitize_.foot)
+    {
+        sanitize_.foot = prevno;
+        sanitize_.foot->next = NULL;
     }
     else
     {

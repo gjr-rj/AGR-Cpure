@@ -39,7 +39,7 @@
             "label": "build (Sanitize)",
             "type": "shell",
             "command": "make",
-            "args": ["sanitze=1"],
+            "args": ["sanitize=1"],
             "group": "build",
             "options": {
                 "cwd": "${workspaceFolder}/build"
@@ -55,7 +55,7 @@
             "label": "build (Sanitize Debud)",
             "type": "shell",
             "command": "make",
-            "args": ["sanitze=1", "debug=1"],
+            "args": ["sanitize=1", "debug=1"],
             "group": "build",
             "options": {
                 "cwd": "${workspaceFolder}/build"

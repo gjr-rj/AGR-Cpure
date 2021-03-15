@@ -13,5 +13,5 @@ main(int argc, char *argv[])
 
     LOG_SANITIZE();
 
-    return 0;
+    return COMMON_AMOUNT();
 }

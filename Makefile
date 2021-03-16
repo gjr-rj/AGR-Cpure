@@ -1,6 +1,6 @@
 CC         = clang
 EXECNAME   = regeal.exe
-PROJECTDIR = ../
+PROJECTDIR = ./
 BINARYDIR  = $(PROJECTDIR)bin
 SRCDIR     = src
 

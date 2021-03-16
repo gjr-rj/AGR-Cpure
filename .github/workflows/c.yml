@@ -15,5 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: mkdir bin
       run: mkdir bin
-    - name: make
-      run: make
+    - name: make smoke-sanitize
+      run: make smoke=1 sanitize=1
+    - name: run
+      run: ./bib/regeal.exe

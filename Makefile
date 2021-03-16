@@ -39,7 +39,7 @@ all: format
 	$(BINARYDIR)/$(EXECNAME) $(FLAGS)
 
 format:
-	find ../ -iname *.h -o -iname *.c | xargs clang-format -i
+	find ./ -iname *.h -o -iname *.c | xargs clang-format -i
 
 clean:
 	$(RM) $(BINARYDIR)/$(EXECNAME)

@@ -10,7 +10,7 @@
             "args": [],
             "group": "build",
             "options": {
-                "cwd": "${workspaceFolder}/build"
+                "cwd": "${workspaceFolder}"
             },
             "presentation": {
                 // Reveal the output only if unrecognized errors occur.
@@ -26,7 +26,7 @@
             "args": ["debu=1"],
             "group": "build",
             "options": {
-                "cwd": "${workspaceFolder}/build"
+                "cwd": "${workspaceFolder}"
             },
             "presentation": {
                 // Reveal the output only if unrecognized errors occur.
@@ -42,7 +42,7 @@
             "args": ["sanitize=1"],
             "group": "build",
             "options": {
-                "cwd": "${workspaceFolder}/build"
+                "cwd": "${workspaceFolder}"
             },
             "presentation": {
                 // Reveal the output only if unrecognized errors occur.
@@ -58,7 +58,7 @@
             "args": ["sanitize=1", "debug=1"],
             "group": "build",
             "options": {
-                "cwd": "${workspaceFolder}/build"
+                "cwd": "${workspaceFolder}"
             },
             "presentation": {
                 // Reveal the output only if unrecognized errors occur.
@@ -74,7 +74,7 @@
             "args": ["sanitize=1", "smoke=1", "debug=1"],
             "group": "build",
             "options": {
-                "cwd": "${workspaceFolder}/build"
+                "cwd": "${workspaceFolder}"
             },
             "presentation": {
                 // Reveal the output only if unrecognized errors occur.
@@ -90,7 +90,7 @@
             "args": ["smoke=1", "debug=1"],
             "group": "build",
             "options": {
-                "cwd": "${workspaceFolder}/build"
+                "cwd": "${workspaceFolder}"
             },
             "presentation": {
                 // Reveal the output only if unrecognized errors occur.

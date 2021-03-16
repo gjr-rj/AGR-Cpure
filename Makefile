@@ -1,7 +1,6 @@
 CC         = clang
 EXECNAME   = regeal.exe
-PROJECTDIR = ./
-BINARYDIR  = $(PROJECTDIR)bin
+BINARYDIR  = bin
 SRCDIR     = src
 
 INCLUDERELDIR  = include
@@ -35,7 +34,7 @@ SOURCE = main.c \
 		 $(LIBTDDDIR)/tddsanitize.c
 
 all: format
-	$(CC) -working-directory=$(PROJECTDIR) $(SOURCE) $(INCLUDES) -o  \
+	$(CC) $(SOURCE) $(INCLUDES) -o  \
 	$(BINARYDIR)/$(EXECNAME) $(FLAGS)
 
 format:

@@ -5,6 +5,7 @@
 int
 main(int argc, char *argv[])
 {
+    char *c = (char *) COMMON_MALLOC (10);
 #ifdef _RUN_SMOKE
     run_tdd();
 #else

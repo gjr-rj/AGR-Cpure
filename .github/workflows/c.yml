@@ -13,13 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: ls
-      run: ls build
-    - name: build
-      run: cd build
-    - name: ls2
-      run: ls -l
-    - name: pwd
-      run: pwd
-    - name: make
-      run: make
+    - name: mkdir bin
+      run: mkdir bin
+    - name: make smoke-sanitize
+      run: make smoke=1 sanitize=1
+    - name: run
+      run: ./bin/regeal.exe
